@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{B1A80BCC-4F6D-699E-6763-4AAB71C9F8EF}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "CityBuild",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		}
+	]
+}
