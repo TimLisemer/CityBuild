@@ -21,7 +21,7 @@ class CITYBUILD_API AMasterStreetAsset : public AMasterStructureAsset
 	UPROPERTY(EditAnywhere, Category="Street Data")	// Is One Way Street
 		bool IsOneWay;
 
-	//Todo: Access: Residents, Police , Trucks...
+	//@todo: Access: Residents, Police , Trucks...
 	
 public:	
 	// Sets default values for this actor's properties

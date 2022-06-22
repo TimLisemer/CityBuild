@@ -27,16 +27,25 @@ public:
 
 	// Building Data
 	UPROPERTY(EditAnywhere, Category="Building Data")	// Name of the Building
-		FString Name;
+		FString BuildingName;
 	
 	UPROPERTY(EditAnywhere, Category="Building Data")	// Base Cost of the Building
-		int32 Cost;
+		int32 BuildingCost;
+
+	UPROPERTY(EditAnywhere, Category="Building Data")	// Cost to keep the Building Running
+		int32 BuildingUpkeepCost;
 
 	UPROPERTY(EditAnywhere, Category="Building Data")	// Attractiveness of the Building | Higher Attractiveness can Raise the Price an will be sold faster
 		int32 Attractiveness;
 
-	UPROPERTY(EditAnywhere, Category="Building Data")	// Presence of the Building | Will effect the Attractiveness both Positive and Negative
+	UPROPERTY(EditAnywhere, Category="Building Data")	// Presence of the Surrounding | Will effect the Attractiveness both Positive and Negative
 		int32 Presence;
+
+	UPROPERTY(EditAnywhere, Category="Building Data")	// Level of the Building
+		int32 BuildingLevel;
+
+	UPROPERTY(EditAnywhere, Category="Building Data")	// Type of the Building
+		FString BuildingType;
 	
 
 protected:

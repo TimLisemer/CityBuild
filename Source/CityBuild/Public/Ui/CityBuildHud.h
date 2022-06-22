@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "BuildingWidget.h"
 
 #include "MainGameHud.h"
 #include "MouseMovementArea.h"
@@ -39,6 +40,9 @@ public:
 		bool LoadMouseMovementArea();
 
 	UFUNCTION()
+		bool LoadBuildingWidget(AMasterStructureAsset* Building);
+
+	UFUNCTION()
 		UUserWidget* LoadWidget(TSubclassOf<UUserWidget> WidgetClass, UUserWidget* Widget, const FSoftClassPath BpPath) const;
 
 	//Declaration of Widget Classes
@@ -46,6 +50,11 @@ public:
 		TSubclassOf<UUserWidget> F3InfoClass;
 	UPROPERTY(Category = "Widgets", BlueprintReadWrite)
 		UF3_Information* F3Info;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Widgets")
+		TSubclassOf<UUserWidget> BuildingWidgetClass;
+	UPROPERTY(Category = "Widgets", BlueprintReadWrite)
+		UBuildingWidget* BuildingWidget;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Widgets")
 		TSubclassOf<UUserWidget> MainGameHudClass;
@@ -65,6 +74,7 @@ public:
 	const FSoftClassPath BP_F3InfoRef = FSoftClassPath(TEXT("/Game/UI/BP_F3Info.BP_F3Info_C"));
 	const FSoftClassPath BP_PauseMenu = FSoftClassPath(TEXT("/Game/UI/BP_PauseMenu.BP_PauseMenu_C"));
 	const FSoftClassPath BP_MouseMovement = FSoftClassPath(TEXT("/Game/UI/BP_MouseMovementArea.BP_MouseMovementArea_C"));
+	const FSoftClassPath BP_BuildingWidget = FSoftClassPath(TEXT("/Game/UI/BP_BuildingWidget.BP_BuildingWidget_C"));
 
 	
 	// Functions of Widget Classes

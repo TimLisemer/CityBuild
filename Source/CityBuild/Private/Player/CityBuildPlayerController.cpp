@@ -248,7 +248,7 @@ void ACityBuildPlayerController::SpawnBuilding()
 		PlaceableActor->SetBuildingMode(false);
 		PlaceableActor = GetWorld()->SpawnActor<AMasterStructureAsset>(TempBuildingClass, Location, Rotation, SpawnInfo);
 		
-		//GridManager->MakeCellsInvisible(GridManager->FindCellsBelowActor(PlaceableActor)); Todo: GridManager->FindCellsBelowActor( *Actor* )
+		//GridManager->MakeCellsInvisible(GridManager->FindCellsBelowActor(PlaceableActor)); @Todo: GridManager->FindCellsBelowActor( *Actor* )
 		
 		SetPlacementModeEnabled(true, TempBuildingClass);
 	}

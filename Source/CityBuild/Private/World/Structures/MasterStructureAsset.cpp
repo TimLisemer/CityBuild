@@ -9,12 +9,6 @@ AMasterStructureAsset::AMasterStructureAsset()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 	SetBuildingMode(false);
-
-	if (UPrimitiveComponent* PrimitiveComponent = FindComponentByClass<UPrimitiveComponent>())
-	{
-		PrimitiveComponent->SetCollisionResponseToAllChannels(ECR_Overlap);
-		PrimitiveComponent->SetCollisionProfileName(TEXT("AMasterStructureAsset"));
-	}
 }
 
 // Called when the game starts or when spawned
@@ -49,7 +43,13 @@ void AMasterStructureAsset::MouseClicked()
 	if(!GetBuildingMode())
 	{
 		BIsClicked = true;
-		UE_LOG(LogTemp, Log, TEXT("Some log message") );
+		UE_LOG(LogTemp, Error, TEXT("MouseClicked"));
+		
+		const ACityBuildPlayerController* PlayerController = Cast<ACityBuildPlayerController>(GetWorld()->GetFirstPlayerController());
+		ACityBuildHud* CityBuildHud = PlayerController->GetCityBuildHud();
+		CityBuildHud->LoadBuildingWidget(this);
+
+		UE_LOG(LogTemp, Error, TEXT("MouseClicked Success"));
 	}
 }
 
@@ -148,7 +148,7 @@ void AMasterStructureAsset::ChangeMaterialToValidOrInvalid(const bool bValid) co
 	TArray<UStaticMeshComponent*> Components;
 	GetComponents<UStaticMeshComponent>(Components);
 
-	const ACityBuildPlayerController* PlayerController = static_cast<ACityBuildPlayerController*>(GetWorld()->GetFirstPlayerController());
+	const ACityBuildPlayerController* PlayerController = Cast<ACityBuildPlayerController>(GetWorld()->GetFirstPlayerController());
 	const AGridManager* GridManager = PlayerController->GetGridManager();
 	if(bValid)
 	{

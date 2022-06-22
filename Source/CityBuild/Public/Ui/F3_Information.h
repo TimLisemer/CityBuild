@@ -23,10 +23,10 @@ public:
 	// Camera Speed
 	void UpdateCameraSpeed(const float SpeedX, const float SpeedY, const FLinearColor Color) const;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* CameraSpeedX;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* CameraSpeedY;
 
 	// Spare Variables
@@ -35,52 +35,52 @@ public:
 	UFUNCTION()
 		void SetSpareVariables(const int32 TextBlocksSlot, const FString Description, const FString Variable);
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable0;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable1;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable2;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable3;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable4;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable5;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable6;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable7;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable8;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable9;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable10;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable11;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable12;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable13;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable14;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget)) //Important: BindWidget
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* SpareVariable15;
 
 };

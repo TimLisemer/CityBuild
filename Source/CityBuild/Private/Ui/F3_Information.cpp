@@ -30,7 +30,6 @@ void UF3_Information::NativeConstruct()
 		TextBlocks.Add(SpareVariable13);
 		TextBlocks.Add(SpareVariable14); 
 		TextBlocks.Add(SpareVariable15);
-
 	}
 }
 

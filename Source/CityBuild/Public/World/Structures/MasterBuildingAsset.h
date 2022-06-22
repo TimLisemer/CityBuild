@@ -18,21 +18,27 @@ public:
 	// Sets default values for this actor's properties
 	AMasterBuildingAsset();
 
-	// Residents
-	UPROPERTY(EditAnywhere, Category="Residents")	// Building will be abandoned if there are < MinResidents living there
-	int32 MinResidents;
+	// Building Data
+	UPROPERTY(EditAnywhere, Category="Building Data")	// Amount of Residents living inside the Building
+		int32 CurrentResidents;
 
-	UPROPERTY(EditAnywhere, Category="Residents")	// Maximum Amount of Citizens living in the Building
-	int32 MaxResidents;
+	UPROPERTY(EditAnywhere, Category="Building Data")	// Maximum Amount of Citizens living in the Building
+		int32 MaxResidents;
 
-	UPROPERTY(EditAnywhere, Category="Residents")	// Amount of Children living in the Building
-	int32 Kids;
+	UPROPERTY(EditAnywhere, Category="Building Data")	// Amount of Children living in the Building
+		int32 Kids;
 
-	UPROPERTY(EditAnywhere, Category="Residents")	// Amount of Adults living in the Building
-	int32 Adults;
+	UPROPERTY(EditAnywhere, Category="Building Data")	// Amount of Adults living in the Building
+		int32 Adults;
 
-	UPROPERTY(EditAnywhere, Category="Residents")	// Amount of Retired living in the Building
-	int32 Retired;
+	UPROPERTY(EditAnywhere, Category="Building Data")	// Amount of Retired living in the Building
+		int32 Retired;
+
+	UPROPERTY(EditAnywhere, Category="Building Data")	// Name of the Street
+		FString StreetName;
+
+	UPROPERTY(EditAnywhere, Category="Building Data")	// HouseNumber of the Building
+		int32 HouseNumber;
 
 
 protected:

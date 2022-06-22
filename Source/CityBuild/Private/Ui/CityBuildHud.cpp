@@ -2,7 +2,8 @@
 
 
 #include "UI/CityBuildHud.h"
-#include "Components/WidgetComponent.h"
+
+#include "Ui/SActorWidgetComponent.h"
 
 // Default Functions
 ACityBuildHud::ACityBuildHud(){}
@@ -82,6 +83,28 @@ bool ACityBuildHud::LoadMouseMovementArea()
 	MouseMovement->RemoveFromViewport();
 	if(MouseMovement) MouseMovement->SetBorderVisibility(false);
 	return !MouseMovement->IsInViewport();
+}
+
+bool ACityBuildHud::LoadBuildingWidget(AMasterStructureAsset* Building)
+{
+	/*
+	BuildingWidget = Cast<UBuildingWidget>(LoadWidget(BuildingWidgetClass, BuildingWidget, BP_BuildingWidget));
+	if(BuildingWidget)
+	{
+		BuildingWidget->SetOwningActor(Building);
+		return true;
+	}
+	*/
+	
+	//Methode 1
+	//USActorWidgetComponent* WidgetComponent = Building->CreateDefaultSubobject<USActorWidgetComponent>("WidgetComponent");
+	//if(BuildingWidget) WidgetComponent->SetWidgetClass(BuildingWidget->GetClass());
+
+	//Methode 2
+    //BuildingWidget = Cast<UBuildingWidget>(BP_BuildingWidget.TryLoadClass<UBuildingWidget>());
+	//if(BuildingWidget) BuildingWidget->SetOwningActor(Building);
+	
+	return true;
 }
 
 //Spare Variables

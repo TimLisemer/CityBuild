@@ -79,25 +79,25 @@ void UMainGameHud::OpenPauseMenu()
 void UMainGameHud::Speed1()
 {
 	Cast<ACityBuildGameState>(GetPlayerContext().GetGameState())->SetCurrentSpeedSetting(0);;
-	//todo: HighlightSpeedButton(1);
+	//@todo: HighlightSpeedButton(1);
 }
 
 void UMainGameHud::Speed2()
 {
 	Cast<ACityBuildGameState>(GetPlayerContext().GetGameState())->SetCurrentSpeedSetting(1);
-	//todo: HighlightSpeedButton(2);
+	//@todo: HighlightSpeedButton(2);
 }
 
 void UMainGameHud::Speed3()
 {
 	Cast<ACityBuildGameState>(GetPlayerContext().GetGameState())->SetCurrentSpeedSetting(2);
-	//todo: HighlightSpeedButton(3);
+	//@todo: HighlightSpeedButton(3);
 }
 
 void UMainGameHud::Speed4()
 {
 	Cast<ACityBuildGameState>(GetPlayerContext().GetGameState())->SetCurrentSpeedSetting(3);
-	//todo: HighlightSpeedButton(4);
+	//@todo: HighlightSpeedButton(4);
 }
 
 void UMainGameHud::ManageButtons()
